@@ -26,5 +26,18 @@ An experimental library for sentimental analysis.
 - (1374356089924247553) Tweet calling out Mississippi Health Department for telling an individual that there is not reported evidence that Moderna vaccine works
 
 
+## Running
 
-❯ docker run -it -p 8888:8888 -v $PWD/docs:/tf -w /tf tensorflow/tensorflow:2.5.0-gpu-jupyter
+**from Docker**
+
+This application can be run using `docker`. First, open a terminal and build an image
+
+```sh
+docker build -t <your-image-name> .
+```
+
+Then run the image with default `jupyter notebooks` running
+
+```sh
+docker run -it -p 8888:8888 -v $PWD/:/app -w /app <your-image-name>
+```
