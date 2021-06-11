@@ -41,3 +41,8 @@ Then run the image with default `jupyter notebooks` running
 ```sh
 docker run -it -p 8888:8888 -v $PWD/:/app -w /app <your-image-name>
 ```
+
+If you have pretrained embeddings loaded from somewhere, just run
+```sh
+docker run -it -p 8888:8888 -v $PWD/:/app -w /app -v ~/Dropbox/tweets/model_data/:/embeddings kombucha
+```
